@@ -17,6 +17,7 @@
 		EA17F6672A963A380037518A /* askMeChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F6662A963A380037518A /* askMeChatTests.swift */; };
 		EA17F6712A963A380037518A /* askMeChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F6702A963A380037518A /* askMeChatUITests.swift */; };
 		EA17F6732A963A380037518A /* askMeChatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F6722A963A380037518A /* askMeChatUITestsLaunchTests.swift */; };
+		EA17F6822A98F7EB0037518A /* PreviousQuestionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F6812A98F7EB0037518A /* PreviousQuestionsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EA17F66C2A963A380037518A /* askMeChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = askMeChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA17F6702A963A380037518A /* askMeChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = askMeChatUITests.swift; sourceTree = "<group>"; };
 		EA17F6722A963A380037518A /* askMeChatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = askMeChatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EA17F6812A98F7EB0037518A /* PreviousQuestionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousQuestionsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				EA17F64C2A963A360037518A /* AppDelegate.swift */,
 				EA17F64E2A963A360037518A /* SceneDelegate.swift */,
 				EA17F6502A963A360037518A /* ViewController.swift */,
+				EA17F6812A98F7EB0037518A /* PreviousQuestionsController.swift */,
 				EA17F6522A963A360037518A /* Main.storyboard */,
 				EA17F6582A963A370037518A /* Assets.xcassets */,
 				EA17F65A2A963A370037518A /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA17F6822A98F7EB0037518A /* PreviousQuestionsController.swift in Sources */,
 				EA17F6512A963A360037518A /* ViewController.swift in Sources */,
 				EA17F64D2A963A360037518A /* AppDelegate.swift in Sources */,
 				EA17F64F2A963A360037518A /* SceneDelegate.swift in Sources */,
