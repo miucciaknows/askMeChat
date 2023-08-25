@@ -23,6 +23,10 @@ class ViewController: UIViewController {
         buscarResposta.layer.cornerRadius = 10
         buscarResposta.clipsToBounds = true
     }
+    
+    @IBAction func previousQuestions(_ sender: Any) {
+    }
+    
 
     @IBOutlet weak var digiteSuaPergunta: UITextField!
     
