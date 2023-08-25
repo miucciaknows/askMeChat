@@ -8,6 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        //InputUsuarioContainerView - Adicionando borda redonda
+        inputUsuario.layer.cornerRadius = 10
+        inputUsuario.clipsToBounds = true
+        
+        //RespostaAssistat - Adicionando borda redonda
+        respostaAssistant.layer.cornerRadius = 10
+        respostaAssistant.clipsToBounds = true
+        
+        //buscarResposta - Adicionando borda redonda
+        buscarResposta.layer.cornerRadius = 10
+        buscarResposta.clipsToBounds = true
+    }
 
     @IBOutlet weak var digiteSuaPergunta: UITextField!
     
@@ -15,6 +30,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var inputUsuario: UITextView!
     
+    @IBOutlet weak var buscarResposta: UIButton!
     
     @IBAction func buscarResposta(_ sender: UIButton) {
         //let apiKey = processInfo.environment["apiKey"]
@@ -27,7 +43,7 @@ class ViewController: UIViewController {
 
         respostaAssistant.isEditable = false
         respostaAssistant.isScrollEnabled = false
-             
+
         let url = URL(string: "")!
         var request = URLRequest(url: url)
              request.httpMethod = "POST"
@@ -71,5 +87,6 @@ class ViewController: UIViewController {
              
              
              digiteSuaPergunta.text = ""
+        
          }
      }
