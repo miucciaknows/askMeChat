@@ -6,7 +6,6 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,21 +45,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuC-dA-ud4">
-                                <rect key="frame" x="347" y="47" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <menu key="menu" id="ERu-eF-cxz">
-                                    <children>
-                                        <command title="Item 1" id="c8w-Ao-zaU" userLabel="Previus Questions"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="...">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="previousQuestions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1S-c7-Nzf"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ipk-MS-bo5" userLabel="Input usuario">
                                 <rect key="frame" x="16" y="103" width="361" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -69,6 +53,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="955-cR-nLl">
+                                <rect key="frame" x="332" y="59" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="..."/>
+                                <connections>
+                                    <segue destination="oTT-gR-qbg" kind="modal" identifier="PreviousQuestionsSegue" id="4ng-C3-VxO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -77,6 +70,7 @@
                         <outlet property="buscarResposta" destination="WgB-Tf-v5S" id="jg0-Od-x0f"/>
                         <outlet property="digiteSuaPergunta" destination="5fp-f5-pWD" id="80J-BU-Nli"/>
                         <outlet property="inputUsuario" destination="ipk-MS-bo5" id="asz-8r-n2v"/>
+                        <outlet property="previousQuestionsButton" destination="955-cR-nLl" id="5NQ-Sj-g0y"/>
                         <outlet property="respostaAssistant" destination="Y0m-uS-ASe" id="K5E-8c-OTh"/>
                     </connections>
                 </viewController>
@@ -84,20 +78,35 @@
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--PreviousQuestionsController-->
         <scene sceneID="Hx2-uv-M0e">
             <objects>
-                <viewController id="oTT-gR-qbg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PreviousQuestionsController" title="PreviousQuestionsController" interactionActivityTrackingBaseName="PreviousQuestionsController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oTT-gR-qbg" customClass="PreviousQuestionsController" customModule="askMeChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QHz-fB-zbe">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ggw-O0-Zjg">
+                                <rect key="frame" x="23" y="75" width="347" height="703"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.77564292329999995" green="0.70032088660000003" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QBh-45-5Ue"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XUg-dg-9B4"/>
+                    <connections>
+                        <outlet property="questionsLabel" destination="Ggw-O0-Zjg" id="KHQ-0y-L05"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uGi-ai-BKK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="4"/>
+            <point key="canvasLocation" x="875.57251908396938" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

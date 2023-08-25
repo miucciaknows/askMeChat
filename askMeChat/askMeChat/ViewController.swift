@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
     
@@ -24,10 +25,11 @@ class ViewController: UIViewController {
         buscarResposta.clipsToBounds = true
     }
     
-    @IBAction func previousQuestions(_ sender: Any) {
-    }
+    var userQuestions: [String] = []
     
-
+   
+    @IBOutlet weak var previousQuestionsButton: UIButton!
+    
     @IBOutlet weak var digiteSuaPergunta: UITextField!
     
     @IBOutlet weak var respostaAssistant: UITextView!
@@ -36,18 +38,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var buscarResposta: UIButton!
     
+
     @IBAction func buscarResposta(_ sender: UIButton) {
         //let apiKey = processInfo.environment["apiKey"]
         let apiKey = ""
         inputUsuario.text = digiteSuaPergunta.text
-        guard let question = digiteSuaPergunta.text else {
+                
+        guard let question = digiteSuaPergunta.text, !question.isEmpty else {
             return
-    }
-  
-
+        
+  }
+        userQuestions.append(question)
+        digiteSuaPergunta.text = ""
+        
         respostaAssistant.isEditable = false
         respostaAssistant.isScrollEnabled = false
-
+        
         let url = URL(string: "")!
         var request = URLRequest(url: url)
              request.httpMethod = "POST"
@@ -91,6 +97,18 @@ class ViewController: UIViewController {
              
              
              digiteSuaPergunta.text = ""
+            print (userQuestions)
+        
         
          }
-     }
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PreviousQuestionsSegue", let destination = segue.destination as? PreviousQuestionsController {
+            destination.previousQuestions = userQuestions
+        }
+    }
+    
+
+   }
+    
+
