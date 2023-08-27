@@ -63,6 +63,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         guard let question = digiteSuaPergunta.text, !question.isEmpty else {
             return
         }
+        
         inputUsuario.text = question
         inputUsuario.isHidden = false
         respostaAssistant.isHidden = false
