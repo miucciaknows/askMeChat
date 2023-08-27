@@ -1,10 +1,14 @@
 # askMeChat
 
 ## Preview 
- 
+
+
+https://github.com/miucciaknows/askMeChat/assets/81270839/3d9dc059-5802-4337-9e80-304390f93aa3
+
+
 This project was developed using **Swift** and **Objective-C**, utilizing **UIKit.**
 
-I use **Watson Discovery** as my _knowledge base_ and **NeuralSeek** to seek the answers.
+I use **Watson Discovery** as my _knowledge base_ and **NeuralSeek** API to seek the answers
 
 ## Watson Discovery
 
