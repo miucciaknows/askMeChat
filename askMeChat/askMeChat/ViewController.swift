@@ -76,7 +76,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     private func performRequest(for question: String) {
-        var apiKey = ProcessInfo.processInfo.environment["apiKey"]
+        let apiKey = ProcessInfo.processInfo.environment["apiKey"]
         guard let url = URL(string: "") else {
             print("Invalid url")
             return
