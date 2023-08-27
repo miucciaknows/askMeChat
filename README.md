@@ -14,7 +14,7 @@ Overall, Watson Discovery's combination of NLP and Machine Learning enables it t
 
 NeuralSeek is a cutting-edge AI tool that harnesses neural networks for advanced search capabilities. It employs deep learning techniques to enhance search accuracy, context understanding and relevance. 
 
--
+###
 
 The combination of Watson Discovery and NeuralSeek results in a search system that marries deep learning-based contextual comprehension with advanced semantic similarity analysis, that delivers highly accurate, nuanced, and relevant information, even when dealing with complex queries and diverse data sources.
 
