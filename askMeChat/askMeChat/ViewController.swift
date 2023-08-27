@@ -59,7 +59,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var buscarResposta: UIButton!
     
     @IBAction func buscarResposta(_ sender: UIButton) {
-        //let apiKey = processInfo.environment["apiKey"]
         guard let question = digiteSuaPergunta.text, !question.isEmpty else {
             return
         }
@@ -77,6 +76,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     private func performRequest(for question: String) {
+        var apiKey = ProcessInfo.processInfo.environment["apiKey"]
         guard let url = URL(string: "") else {
             print("URL inválida")
             return
@@ -85,7 +85,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("ApiKey aqui", forHTTPHeaderField: "apikey")
+        request.setValue(apiKey, forHTTPHeaderField: "apikey")
         
         let parameters: [String: Any] = [
             "question": question,
