@@ -37,6 +37,13 @@ Here's how you can proceed:
 **3.** Retrieve the **URL** and **API key** from **NeuralSeek**, then place them in the **ViewController.swift** file.
 <br>
 
+
+
+https://github.com/miucciaknows/askMeChat/assets/81270839/5b2ba55e-fede-4763-a205-d332a410971c
+
+
 `You can incorporate your API key using a schema by passing the name "apikey" along with its value. Alternatively, you can directly insert your API key value into the appropriate field within the code.`
+
+<img width="1420" alt="" src="https://github.com/miucciaknows/askMeChat/assets/81270839/a81a7486-2daa-4762-a208-2ab14bb4a0c1">
 
 By following these steps, you'll be able to replicate the project successfully and integrate **Watson Discovery** and **NeuralSeek** into your Xcode project.
