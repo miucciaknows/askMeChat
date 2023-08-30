@@ -2,9 +2,7 @@
 
 ## Preview 
 
-
-https://github.com/miucciaknows/askMeChat/assets/81270839/e1a74e53-0c7d-4e36-9c7b-398c8dd726f0
-
+https://github.com/miucciaknows/askMeChat/assets/81270839/5afb677e-c7e7-4383-8e97-922fe26f9153
 
 This project was developed using **Swift** and **Objective-C**, utilizing **UIKit.**
 
