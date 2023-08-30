@@ -3,7 +3,7 @@
 ## Preview 
 
 
-https://github.com/miucciaknows/askMeChat/assets/81270839/3d9dc059-5802-4337-9e80-304390f93aa3
+https://github.com/miucciaknows/askMeChat/assets/81270839/e1a74e53-0c7d-4e36-9c7b-398c8dd726f0
 
 
 This project was developed using **Swift** and **Objective-C**, utilizing **UIKit.**
